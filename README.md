@@ -80,7 +80,7 @@ The final device dimensions used in the LTspice schematic are listed below:
 
 ## AC Analysis
 
-# Input common Mode Range=1.6V
+### Input common Mode Range=1.6V
 Phase Margin=59.31°
 GBW=30.23 MHz
 DC Gain=61.25 dB
