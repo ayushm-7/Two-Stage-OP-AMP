@@ -120,27 +120,19 @@ The slew rate was calculated from the transient response by measuring the output
 
 From the measured waveform:
 
-$$
-\Delta V = 999.21439\text{ mV} = 0.99921439\text{ V}
-$$
+**ΔV = 999.21439 mV = 0.99921439 V**
 
-$$
-\Delta t = 28.586898\text{ ns}
-$$
+**Δt = 28.586898 ns**
 
-Therefore,
+The slew rate is calculated as:
 
-$$
-SR = \frac{\Delta V}{\Delta t}
-$$
+**SR = ΔV / Δt**
 
-$$
-SR \approx 34.95\text{ V/}\mu\text{s}
-$$
+Therefore:
 
-Hence, the measured rising-edge slew rate is:
+**SR ≈ 34.95 V/μs**
 
-**Slew Rate ≈ 34.95 V/μs**
+Hence, the measured rising-edge slew rate is approximately **34.95 V/μs**.
 
 The measured value is below the original target of 40 V/μs, indicating that the available charging current of the compensation capacitor limits the large-signal response.
 
@@ -154,11 +146,9 @@ The input common-mode range was evaluated by varying the common-mode input volta
 
 The specified common-mode range is:
 
-$$
-0.8\text{ V} \leq V_{CM} \leq 1.6\text{ V}
-$$
+**0.8 V ≤ VCM ≤ 1.6 V**
 
-The simulation shows approximately **20 μA** of current over the 0.8 V to 1.6 V range, indicating that the input stage maintains its intended operating condition across this range.
+The simulation shows approximately **20 μA** of saturation current over the 0.8 V to 1.6 V range, indicating that the input stage maintains its intended operating condition across this range.
 
 <img width="1918" height="881" alt="ICMR Verification" src="https://github.com/user-attachments/assets/065aab44-ea8b-42d2-a842-4742e0c25164" />
 
@@ -181,19 +171,13 @@ From the simulation:
 
 Therefore, the output voltage range is:
 
-$$
-V_{OUT,\text{range}} \approx 0.03\text{ V to }1.70\text{ V}
-$$
+**VOUT,range ≈ 0.03 V to 1.70 V**
 
 The measured output swing is:
 
-$$
-\Delta V_{OUT} = 1.70 - 0.03
-$$
+**ΔVOUT = 1.70 − 0.03**
 
-$$
-\boxed{\Delta V_{OUT} \approx 1.67\text{ V}}
-$$
+**ΔVOUT ≈ 1.67 V**
 
 Thus, the amplifier achieves an output swing of approximately **1.67 V** with a 1.8 V supply.
 
