@@ -87,7 +87,7 @@ DC Gain=61.25 dB
 
 <img width="1919" height="849" alt="image" src="https://github.com/user-attachments/assets/22ee022e-a359-4fee-9e35-a155c5294a0f" />
 
-# Input common Mode Range=0.8V
+### Input common Mode Range=0.8V
 Phase Margin=58.23°
 GBW=30.24 MHz
 DC Gain=72.1 dB
@@ -95,3 +95,10 @@ DC Gain=72.1 dB
 <img width="1919" height="844" alt="image" src="https://github.com/user-attachments/assets/887180e4-defe-42da-908f-a74e432d8d85" />
 
 ## Slew Rate
+
+### Rising Edge
+
+-ΔV=999.21439mV=0.99921439V,Δt=28.586898ns
+-SR=34.95 V/µsec
+<img width="1919" height="849" alt="image" src="https://github.com/user-attachments/assets/9b4524cd-9cc2-445e-8158-64decc6eb749" />
+
