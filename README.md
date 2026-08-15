@@ -105,5 +105,4 @@ Transistor Sizing Optimization
 
 ## Circuit Schematic
 
-<img width="1916" height="874" alt="image" src="https://github.com/user-attachments/assets/7fe2feef-21f3-4666-a6ea-8dec50477dd6" />
-
+<img width="1916" height="874" alt="image" src="https://github.com/user-attachments/assets/2ee9434b-65be-4871-9a4f-ede607fc9ac7" />
