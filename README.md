@@ -183,9 +183,6 @@ Thus, the amplifier achieves an output swing of approximately **1.67 V** with a 
 
 <img width="1918" height="852" alt="image" src="https://github.com/user-attachments/assets/72176451-64a9-447e-907b-f96ffa447cba" />
 
-## Power Dissipation
-
-```markdown
 ## Power Dissipation Analysis
 
 The power consumption of the op-amp was evaluated from the current drawn from the 1.8 V supply.
