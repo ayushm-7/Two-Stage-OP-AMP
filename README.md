@@ -91,3 +91,19 @@ LTspice Simulation
 Gain / GBW / PM / SR / Power Verification
           ↓
 Transistor Sizing Optimization
+
+---
+## Final Transistor Dimensions
+
+| MOSFET | L | W | W/L |
+|--------|----|----|-----|
+| M1, M2 | 500n | 3u | 6 |
+| M3, M4 | 500n | 7u | 14 |
+| M5, M8 | 1u | 12u | 12 |
+| M6 | 500n | 87u | 174 |
+| M7 | 1u | 75u | 75 |
+
+## Circuit Schematic
+
+<img width="1916" height="874" alt="image" src="https://github.com/user-attachments/assets/7fe2feef-21f3-4666-a6ea-8dec50477dd6" />
+
