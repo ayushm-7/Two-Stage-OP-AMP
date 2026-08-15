@@ -94,6 +94,7 @@ DC Gain=72.1 dB
 
 <img width="1919" height="844" alt="image" src="https://github.com/user-attachments/assets/887180e4-defe-42da-908f-a74e432d8d85" />
 
+
 ## Slew Rate
 
 ### Rising Edge
