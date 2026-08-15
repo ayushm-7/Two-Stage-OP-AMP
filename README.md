@@ -184,10 +184,7 @@ Thus, the amplifier achieves an output swing of approximately **1.67 V** with a 
 <img width="1918" height="852" alt="image" src="https://github.com/user-attachments/assets/72176451-64a9-447e-907b-f96ffa447cba" />
 
 ## Power Dissipation
-For ICMR=0.8
-<img width="451" height="53" alt="image" src="https://github.com/user-attachments/assets/701d4f72-0f22-44f2-854b-f1c2439854d3" />
-For ICMR=1.6
-<img width="429" height="36" alt="image" src="https://github.com/user-attachments/assets/fd831a30-f65a-4d10-b7d9-6bfdc2da065a" />
+
 ```markdown
 ## Power Dissipation Analysis
 
@@ -211,7 +208,7 @@ Therefore:
 
 **P ≈ 310.84 μW**
 
-<img width="..." height="..." alt="Power analysis at 1.6 V common-mode input" src="YOUR_IMAGE_LINK_HERE" />
+<img width="429" height="36" alt="image" src="https://github.com/user-attachments/assets/fd831a30-f65a-4d10-b7d9-6bfdc2da065a" />
 
 ### At Common-Mode Input = 0.8 V
 
@@ -225,7 +222,7 @@ Therefore:
 
 **P ≈ 298.45 μW**
 
-<img width="..." height="..." alt="Power analysis at 0.8 V common-mode input" src="YOUR_IMAGE_LINK_HERE" />
+<img width="451" height="53" alt="image" src="https://github.com/user-attachments/assets/701d4f72-0f22-44f2-854b-f1c2439854d3" />
 
 ### Power Summary
 
