@@ -208,7 +208,8 @@ Therefore:
 
 **P ≈ 310.84 μW**
 
-<img width="429" height="36" alt="image" src="https://github.com/user-attachments/assets/fd831a30-f65a-4d10-b7d9-6bfdc2da065a" />
+<img width="447" height="23" alt="image" src="https://github.com/user-attachments/assets/9758889f-0a8a-4712-a73c-2f0e68b4cc84" />
+
 
 ### At Common-Mode Input = 0.8 V
 
@@ -222,7 +223,7 @@ Therefore:
 
 **P ≈ 298.45 μW**
 
-<img width="451" height="53" alt="image" src="https://github.com/user-attachments/assets/701d4f72-0f22-44f2-854b-f1c2439854d3" />
+<img width="454" height="41" alt="image" src="https://github.com/user-attachments/assets/d3585549-c3f3-40fc-b465-d6ef6f531fe9" />
 
 ### Power Summary
 
