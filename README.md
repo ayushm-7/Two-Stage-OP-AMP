@@ -111,4 +111,15 @@ From the image,saturation current(≈20 uA) between 0.8 to 1.6V
 Schematic:
 <img width="1912" height="842" alt="image" src="https://github.com/user-attachments/assets/2cb619c9-f228-4a25-9996-f0f757a30be9" />
 
+### Output Swing Analysis
+
+The output swing of the two-stage CMOS operational amplifier was evaluated using a unity-gain voltage follower configuration. The inverting input was connected to the output, while the non-inverting input was swept from 0 V to 1.8 V.
+
+The output voltage was monitored to determine the minimum and maximum output levels over which the amplifier maintained proper operation. From the transient/DC sweep results, the output was able to swing approximately from 0.03 V to 1.70 V.
+
+Thus, the measured output swing was approximately:
+
+**Output Swing ≈ 1.67 V**
+
+<img width="953" height="850" alt="image" src="https://github.com/user-attachments/assets/b2ffd7b1-2d6a-42c8-96d1-7cc32f6b770d" />
 
