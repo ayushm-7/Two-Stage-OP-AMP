@@ -181,4 +181,5 @@ The measured output swing is:
 
 Thus, the amplifier achieves an output swing of approximately **1.67 V** with a 1.8 V supply.
 
-<img width="953" height="850" alt="Output Swing Analysis" src="https://github.com/user-attachments/assets/b2ffd7b1-2d6a-42c8-96d1-7cc32f6b770d" />
+<img width="1918" height="852" alt="image" src="https://github.com/user-attachments/assets/72176451-64a9-447e-907b-f96ffa447cba" />
+
