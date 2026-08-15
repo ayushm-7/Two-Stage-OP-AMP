@@ -1,108 +1,68 @@
-# Two-Stage CMOS Operational Amplifier
+# Two-Stage CMOS Operational Amplifier (180 nm CMOS)
 
-A transistor-level design and simulation of a two-stage CMOS operational amplifier using a 180 nm CMOS technology in LTspice.
+Design and simulation of a two-stage CMOS operational amplifier implemented in a 180 nm CMOS process using LTspice.
 
-The project focuses on transistor sizing, bias-current design, Miller compensation, frequency response, stability, slew-rate, and power verification.
+## Overview
 
----
+This repository contains the complete design, analysis, and simulation of a two-stage CMOS operational amplifier implemented using a 180 nm CMOS process.
 
-## Project Highlights
-
-- 180 nm CMOS technology
-- 1.8 V single supply
-- Two-stage CMOS op-amp architecture
-- PMOS active-load differential input stage
-- Common-source second gain stage
-- Miller frequency compensation
-- Designed for 2 pF load capacitance
-- Transistor-level simulation in LTspice
-- AC, DC and transient analysis
+The project demonstrates the complete analog IC design flow, from hand calculations and transistor sizing to simulation and verification.
 
 ---
+## Design Specifications
 
-## Design Targets
-
-| Specification | Target |
-|---|---:|
+| Parameter | Value |
+|-----------|-------|
 | Technology | 180 nm CMOS |
 | Supply Voltage | 1.8 V |
-| DC Gain | ≥ 60 dB |
-| Gain-Bandwidth | 30 MHz |
-| Phase Margin | ≥ 60° |
-| Slew Rate | 40 V/µs |
+| DC Gain | 60 dB |
+| GBW | 30 MHz |
+| Phase Margin | ≥60° |
+| Slew Rate | 40 V/μs |
 | Load Capacitance | 2 pF |
-| Power Dissipation | ≤ 300 µW |
-| Input Common-Mode Range | 0.8 – 1.6 V |
+| Power | ≤300 μW |
+| ICMR | 0.8 V – 1.6 V |
 
 ---
 
-## Circuit Architecture
+## Architecture
 
-The amplifier follows the conventional two-stage CMOS operational amplifier topology.
+The proposed operational amplifier employs a classical two-stage architecture consisting of:
 
-### Main Blocks
+- Differential input pair
+- PMOS current mirror active load
+- Common-source second gain stage
+- Miller compensation capacitor
+- Bias current mirror
 
-1. **Differential Input Stage**
-   - Converts the input voltage difference into differential drain currents.
-   - Provides the first stage of voltage gain.
+## Design Methodology
 
-2. **PMOS Active Load**
-   - Implements current-mirror loading for the differential pair.
-   - Converts differential currents into a single-ended output.
+The amplifier was designed using the following procedure.
 
-3. **Second Gain Stage**
-   - Uses a common-source configuration to provide additional voltage gain.
-   - Drives the external load through the output node.
+1. Define design specifications.
+2. Select Miller compensation capacitor.
+3. Calculate bias current from slew rate.
+4. Calculate transconductance (gm).
+5. Determine overdrive voltages.
+6. Calculate transistor aspect ratios (W/L).
+7. Design current mirrors.
+8. Design second gain stage.
+9. Verify gain and GBW.
+10. Optimize phase margin.
+11. Verify ICMR.
+12. Verify power dissipation.
+13. Perform AC, DC, and transient simulations.
 
-4. **Miller Compensation**
-   - A compensation capacitor is connected between the first-stage output and the final output.
-   - Used to establish dominant-pole compensation and improve closed-loop stability.
-
-5. **Bias Network**
-   - Generates the required bias currents for the input and gain stages.
-
----
-
-## Design Approach
-
-The design was developed by starting from the required performance specifications and then translating them into transistor-level parameters.
-
-The main design sequence was:
-
-```text
-Performance Specifications
-          ↓
-Miller Capacitor Selection
-          ↓
-Bias Current from Slew-Rate Requirement
-          ↓
-Required Transconductance
-          ↓
-Overdrive Voltage Selection
-          ↓
-MOSFET W/L Calculation
-          ↓
-Current-Mirror Design
-          ↓
-Second-Stage Design
-          ↓
-LTspice Simulation
-          ↓
-Gain / GBW / PM / SR / Power Verification
-          ↓
-Transistor Sizing Optimization
-
----
 ## Final Transistor Dimensions
 
 | MOSFET | L | W | W/L |
 |--------|----|----|-----|
-| M1, M2 | 500n | 3u | 6 |
-| M3, M4 | 500n | 7u | 14 |
-| M5, M8 | 1u | 12u | 12 |
-| M6 | 500n | 87u | 174 |
-| M7 | 1u | 75u | 75 |
+| M1, M2 | 500 nm | 3 μm | 6 |
+| M3, M4 | 500 nm | 7 μm | 14 |
+| M5, M8 | 1 μm | 12 μm | 12 |
+| M6 | 500 nm | 87 μm | 174 |
+| M7 | 1 μm | 75 μm | 75 |
 
 ## Circuit Schematic
 
-<img width="1916" height="874" alt="image" src="https://github.com/user-attachments/assets/2ee9434b-65be-4871-9a4f-ede607fc9ac7" />
+<img width="1910" height="877" alt="image" src="https://github.com/user-attachments/assets/4529c4ae-dcc4-434e-9bd0-a17d27cae1c3" />
