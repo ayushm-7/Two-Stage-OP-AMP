@@ -74,6 +74,6 @@ The final device dimensions used in the LTspice schematic are listed below:
 | M6 | 500 nm | 87 μm | 174 |
 | M7 | 1 μm | 75 μm | 75 |
 
-## Circuit Schematic
+## Schematic
 
 <img width="1910" height="877" alt="image" src="https://github.com/user-attachments/assets/4529c4ae-dcc4-434e-9bd0-a17d27cae1c3" />
