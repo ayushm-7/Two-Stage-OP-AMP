@@ -98,7 +98,15 @@ DC Gain=72.1 dB
 
 ### Rising Edge
 
--ΔV=999.21439mV=0.99921439V,Δt=28.586898ns
--SR=34.95 V/µsec
+ΔV=999.21439mV=0.99921439V,Δt=28.586898ns...
+SR=34.95 V/µsec
 <img width="1919" height="849" alt="image" src="https://github.com/user-attachments/assets/9b4524cd-9cc2-445e-8158-64decc6eb749" />
+
+### ICMR Verification
+Calculated:0.8 to 1.6V
+<img width="1918" height="881" alt="image" src="https://github.com/user-attachments/assets/065aab44-ea8b-42d2-a842-4742e0c25164" />
+From the image,saturation current(≈20 uA) between 0.8 to 1.6V
+Schematic:
+<img width="1912" height="842" alt="image" src="https://github.com/user-attachments/assets/2cb619c9-f228-4a25-9996-f0f757a30be9" />
+
 
