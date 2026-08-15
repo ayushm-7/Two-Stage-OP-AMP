@@ -77,3 +77,19 @@ The final device dimensions used in the LTspice schematic are listed below:
 ## Schematic
 
 <img width="1910" height="877" alt="image" src="https://github.com/user-attachments/assets/4529c4ae-dcc4-434e-9bd0-a17d27cae1c3" />
+
+## AC Analysis
+
+# Input common Mode Range=1.6V
+Phase Margin=59.31°
+GBW=30.23 MHz
+DC Gain=61.25 dB
+
+<img width="1919" height="849" alt="image" src="https://github.com/user-attachments/assets/22ee022e-a359-4fee-9e35-a155c5294a0f" />
+
+# Input common Mode Range=0.8V
+Phase Margin=58.23°
+GBW=30.24 MHz
+DC Gain=72.1 dB
+
+<img width="1919" height="844" alt="image" src="https://github.com/user-attachments/assets/887180e4-defe-42da-908f-a74e432d8d85" />
