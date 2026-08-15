@@ -1,62 +1,73 @@
-# Two-Stage CMOS Operational Amplifier (180 nm CMOS)
+# Two-Stage CMOS Operational Amplifier | 180 nm
 
-Design and simulation of a two-stage CMOS operational amplifier implemented in a 180 nm CMOS process using LTspice.
+A transistor-level implementation and LTspice simulation of a two-stage CMOS operational amplifier designed using a 180 nm CMOS technology.
 
-## Overview
+## Project Overview
 
-This repository contains the complete design, analysis, and simulation of a two-stage CMOS operational amplifier implemented using a 180 nm CMOS process.
+This project focuses on designing a CMOS op-amp while considering important analog performance parameters such as gain, bandwidth, stability, slew rate, input common-mode range, and power consumption.
 
-The project demonstrates the complete analog IC design flow, from hand calculations and transistor sizing to simulation and verification.
+The design process starts with the required specifications and proceeds through analytical calculations, MOSFET sizing, circuit implementation, and simulation-based validation.
 
 ---
-## Design Specifications
 
-| Parameter | Value |
-|-----------|-------|
-| Technology | 180 nm CMOS |
+## Target Specifications
+
+| Parameter | Target |
+|-----------|--------|
+| CMOS Technology | 180 nm |
 | Supply Voltage | 1.8 V |
-| DC Gain | 60 dB |
-| GBW | 30 MHz |
-| Phase Margin | ≥60° |
+| Open-Loop Gain | 60 dB |
+| Gain Bandwidth | 30 MHz |
+| Phase Margin | ≥ 60° |
 | Slew Rate | 40 V/μs |
-| Load Capacitance | 2 pF |
-| Power | ≤300 μW |
-| ICMR | 0.8 V – 1.6 V |
+| Load Capacitor | 2 pF |
+| Maximum Power | 300 μW |
+| Input Common-Mode Range | 0.8 V – 1.6 V |
 
 ---
 
-## Architecture
+## Circuit Configuration
 
-The proposed operational amplifier employs a classical two-stage architecture consisting of:
+The op-amp is based on a two-stage CMOS topology. Its main sections are:
 
-- Differential input pair
-- PMOS current mirror active load
-- Common-source second gain stage
+- NMOS differential input stage
+- PMOS active-load current mirror
+- Tail-current bias circuit
+- Second-stage common-source amplifier
+- Output load transistor
 - Miller compensation capacitor
-- Bias current mirror
 
-## Design Methodology
+The first stage converts the differential input into a single-ended signal and provides the initial gain. The second stage further amplifies this signal and drives the output.
 
-The amplifier was designed using the following procedure.
+---
 
-1. Define design specifications.
-2. Select Miller compensation capacitor.
-3. Calculate bias current from slew rate.
-4. Calculate transconductance (gm).
-5. Determine overdrive voltages.
-6. Calculate transistor aspect ratios (W/L).
-7. Design current mirrors.
-8. Design second gain stage.
-9. Verify gain and GBW.
-10. Optimize phase margin.
-11. Verify ICMR.
-12. Verify power dissipation.
-13. Perform AC, DC, and transient simulations.
+## Design Flow
 
-## Final Transistor Dimensions
+The circuit was developed through the following sequence:
 
-| MOSFET | L | W | W/L |
-|--------|----|----|-----|
+1. Establish the required op-amp specifications.
+2. Choose an appropriate Miller compensation capacitor.
+3. Estimate the bias current using the slew-rate requirement.
+4. Obtain the required input-stage transconductance.
+5. Select suitable MOSFET overdrive voltages.
+6. Determine the required transistor W/L values.
+7. Size the current mirrors according to the required current ratios.
+8. Design and size the second gain stage.
+9. Implement the complete circuit in LTspice.
+10. Check the simulated gain and bandwidth.
+11. Evaluate phase margin and frequency stability.
+12. Check the input common-mode range.
+13. Measure the total power consumption.
+14. Perform AC and transient simulations for final verification.
+
+---
+
+## MOSFET Dimensions
+
+The final device dimensions used in the LTspice schematic are listed below:
+
+| Transistor | L | W | W/L |
+|------------|---|---|-----|
 | M1, M2 | 500 nm | 3 μm | 6 |
 | M3, M4 | 500 nm | 7 μm | 14 |
 | M5, M8 | 1 μm | 12 μm | 12 |
