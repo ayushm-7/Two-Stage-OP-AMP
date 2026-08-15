@@ -28,7 +28,7 @@ The design flow begins with the required specifications and proceeds through ana
 
 ## Circuit Configuration
 
-The amplifier uses a conventional two-stage CMOS topology consisting of:
+The amplifier is based on a conventional two-stage CMOS topology consisting of:
 
 - NMOS differential input pair
 - PMOS active-load current mirror
@@ -37,7 +37,7 @@ The amplifier uses a conventional two-stage CMOS topology consisting of:
 - Output load transistor
 - Miller compensation capacitor
 
-The first stage converts the differential input voltage into a single-ended signal while providing the initial voltage gain. The second stage provides additional voltage amplification and drives the output node. Miller compensation is used to improve frequency stability and establish the required phase margin.
+The first stage converts the differential input voltage into a single-ended signal while providing the initial voltage gain. The second stage provides additional voltage amplification and drives the output node. Miller compensation is used to improve frequency stability.
 
 ---
 
@@ -84,7 +84,7 @@ The final transistor dimensions used in the LTspice implementation are:
 
 ## AC Analysis
 
-The open-loop frequency response was analyzed at two different common-mode input voltages to check the variation in gain and stability across the specified input range.
+The open-loop frequency response was analyzed at two different common-mode input voltages to evaluate the gain and stability of the amplifier across the specified input range.
 
 ### Common-Mode Input = 1.6 V
 
@@ -94,19 +94,19 @@ The simulated results are:
 - **GBW:** 30.23 MHz
 - **Phase Margin:** 59.31°
 
-The measured gain is above the 60 dB target and the GBW is very close to the specified 30 MHz requirement.
+The measured gain is above the 60 dB target, while the GBW is very close to the specified 30 MHz value.
 
 <img width="1919" height="849" alt="AC Response at 1.6 V Common-Mode Input" src="https://github.com/user-attachments/assets/22ee022e-a359-4fee-9e35-a155c5294a0f" />
 
 ### Common-Mode Input = 0.8 V
 
-At the lower end of the specified common-mode range:
+At the lower end of the specified common-mode range, the simulated results are:
 
 - **DC Gain:** 72.1 dB
 - **GBW:** 30.24 MHz
 - **Phase Margin:** 58.23°
 
-The increase in DC gain indicates the dependence of the amplifier's small-signal characteristics on the input common-mode voltage. The GBW remains approximately 30 MHz.
+The gain changes with the common-mode input voltage, while the GBW remains approximately 30 MHz.
 
 <img width="1919" height="844" alt="AC Response at 0.8 V Common-Mode Input" src="https://github.com/user-attachments/assets/887180e4-defe-42da-908f-a74e432d8d85" />
 
@@ -114,35 +114,35 @@ The increase in DC gain indicates the dependence of the amplifier's small-signal
 
 ## Slew Rate Analysis
 
-The slew rate was obtained from the transient response by measuring the change in output voltage over the corresponding transition time.
+The slew rate was calculated from the transient response by measuring the output voltage change and the corresponding time interval.
 
 ### Rising Edge
 
-From the waveform:
+From the measured waveform:
 
-\[
+$$
 \Delta V = 999.21439\text{ mV} = 0.99921439\text{ V}
-\]
+$$
 
-\[
+$$
 \Delta t = 28.586898\text{ ns}
-\]
+$$
 
 Therefore,
 
-\[
+$$
 SR = \frac{\Delta V}{\Delta t}
-\]
+$$
 
-\[
-SR \approx 34.95\text{ V/μs}
-\]
+$$
+SR \approx 34.95\text{ V/}\mu\text{s}
+$$
 
-The measured rising-edge slew rate is therefore approximately:
+Hence, the measured rising-edge slew rate is:
 
 **Slew Rate ≈ 34.95 V/μs**
 
-This is below the initial target of 40 V/μs, indicating that the available charging current of the compensation capacitor limits the large-signal response.
+The measured value is below the original target of 40 V/μs, indicating that the available charging current of the compensation capacitor limits the large-signal response.
 
 <img width="1919" height="849" alt="Rising Edge Slew Rate" src="https://github.com/user-attachments/assets/9b4524cd-9cc2-445e-8158-64decc6eb749" />
 
@@ -150,15 +150,15 @@ This is below the initial target of 40 V/μs, indicating that the available char
 
 ## ICMR Verification
 
-The input common-mode range was evaluated by varying the common-mode input voltage and observing the bias current of the input stage.
+The input common-mode range was evaluated by varying the common-mode input voltage and observing the operating current of the input stage.
 
-The intended common-mode range is:
+The specified common-mode range is:
 
-\[
-\boxed{0.8\text{ V} \leq V_{CM} \leq 1.6\text{ V}}
-\]
+$$
+0.8\text{ V} \leq V_{CM} \leq 1.6\text{ V}
+$$
 
-The simulation shows approximately **20 μA of saturation current** across the 0.8 V to 1.6 V range, indicating that the input stage maintains its intended operating condition over this range.
+The simulation shows approximately **20 μA** of current over the 0.8 V to 1.6 V range, indicating that the input stage maintains its intended operating condition across this range.
 
 <img width="1918" height="881" alt="ICMR Verification" src="https://github.com/user-attachments/assets/065aab44-ea8b-42d2-a842-4742e0c25164" />
 
@@ -172,28 +172,28 @@ The simulation shows approximately **20 μA of saturation current** across the 0
 
 The output swing was evaluated using the op-amp in a **unity-gain voltage follower configuration**. The inverting input was connected to the output, while the non-inverting input was swept from 0 V to 1.8 V.
 
-The output voltage was then observed to determine the range over which the amplifier could follow the input while maintaining proper operation.
+The output voltage was monitored to determine the minimum and maximum output levels over which the amplifier could follow the input.
 
 From the simulation:
 
 - **Minimum output voltage:** ≈ 0.03 V
 - **Maximum output voltage:** ≈ 1.70 V
 
-Therefore,
+Therefore, the output voltage range is:
 
-\[
+$$
 V_{OUT,\text{range}} \approx 0.03\text{ V to }1.70\text{ V}
-\]
+$$
 
-and the measured output swing is:
+The measured output swing is:
 
-\[
-\Delta V_{OUT}=1.70-0.03
-\]
+$$
+\Delta V_{OUT} = 1.70 - 0.03
+$$
 
-\[
-\boxed{\Delta V_{OUT}\approx1.67\text{ V}}
-\]
+$$
+\boxed{\Delta V_{OUT} \approx 1.67\text{ V}}
+$$
 
 Thus, the amplifier achieves an output swing of approximately **1.67 V** with a 1.8 V supply.
 
