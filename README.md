@@ -183,3 +183,56 @@ Thus, the amplifier achieves an output swing of approximately **1.67 V** with a 
 
 <img width="1918" height="852" alt="image" src="https://github.com/user-attachments/assets/72176451-64a9-447e-907b-f96ffa447cba" />
 
+## Power Dissipation
+For ICMR=0.8
+<img width="451" height="53" alt="image" src="https://github.com/user-attachments/assets/701d4f72-0f22-44f2-854b-f1c2439854d3" />
+For ICMR=1.6
+<img width="429" height="36" alt="image" src="https://github.com/user-attachments/assets/fd831a30-f65a-4d10-b7d9-6bfdc2da065a" />
+```markdown
+## Power Dissipation Analysis
+
+The power consumption of the op-amp was evaluated from the current drawn from the 1.8 V supply.
+
+The DC power consumption is calculated using:
+
+**P = VDD × IDD**
+
+where VDD = 1.8 V and IDD is the magnitude of the supply current measured from `I(VDD1)` in LTspice.
+
+### At Common-Mode Input = 1.6 V
+
+The simulated supply current is:
+
+**IDD = 172.687 μA**
+
+Therefore:
+
+**P = 1.8 × 172.687 μA**
+
+**P ≈ 310.84 μW**
+
+<img width="..." height="..." alt="Power analysis at 1.6 V common-mode input" src="YOUR_IMAGE_LINK_HERE" />
+
+### At Common-Mode Input = 0.8 V
+
+The simulated supply current is:
+
+**IDD = 165.806 μA**
+
+Therefore:
+
+**P = 1.8 × 165.806 μA**
+
+**P ≈ 298.45 μW**
+
+<img width="..." height="..." alt="Power analysis at 0.8 V common-mode input" src="YOUR_IMAGE_LINK_HERE" />
+
+### Power Summary
+
+| Common-Mode Input | Supply Current | Power |
+|-------------------|----------------|-------|
+| 1.6 V | 172.687 μA | 310.84 μW |
+| 0.8 V | 165.806 μA | 298.45 μW |
+
+The power consumption is approximately **298.45–310.84 μW** over the two tested common-mode conditions. The circuit is very close to the specified **300 μW** power target, with the 0.8 V condition remaining below the limit.
+```
